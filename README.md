@@ -1,7 +1,8 @@
-# ♻️ Waste Classification Dataset (Global Taxonomy)  
+# ♻️ Waste Classification Dataset (Global Taxonomy)
+(TẬP DATASET CHO CÁC LOẠI RÁC SINH HOẠT)
 ### 🧩 Built for **SAM2 Segmentation** + 🧠 **Waste Classifier**
 
-Dataset này được tổ chức theo **10 nhóm rác (waste streams)** phổ biến quốc tế để phục vụ đồ án:
+Dataset này được tổ chức theo **4 nhóm rác sinh hoạt hàng ngày (waste streams)** phổ biến quốc tế để phục vụ đồ án:
 - 🖼️ **Segment Anything 2 (SAM2)**: tách vật thể rác → sinh mask (instance segmentation)
 - 🧠 **Classifier**: phân loại rác theo **nhóm lớn (Level A)** hoặc **nhóm nhỏ (Level B)** dựa trên folder label
 
@@ -9,16 +10,7 @@ Dataset này được tổ chức theo **10 nhóm rác (waste streams)** phổ b
 
 ## 📌 1) Dataset Folder Structure (Theo đúng cây thư mục hiện tại)
 
-> ⚠️ Lưu ý: Giữ nguyên tên folder tiếng Việt + tiếng Anh trong ngoặc như bạn đã tạo.
-
 data/
-├── 🧪 Bùn thải & chất thải từ hệ thống nước thải (Wastewater sludge)/
-│ ├── 🏭 Bùn từ trạm xử lý nước thải đô thịkhu công nghiệp/
-│ └── 🍳 Cặn từ bẫy mỡ nhà hàng/
-├── ⛏️ Chất thải khai khoáng (Mining waste)/
-│ └── 🪨 Đất đá thải, quặng đuôi, bùn tuyển…/
-├── ☢️ Chất thải phóng xạ (Radioactive waste)/
-│ └── 🧫 Nguồn kín (sealed sources), chất thải mức thấp, vật liệu nhiễm xạ…/
 ├── 🌾 Rác nông nghiệp (Agricultural waste)/
 │ ├── 🧴 Bao bì hóa chất nông nghiệp/
 │ ├── 🧵 Màng phủ nông nghiệp, ống tưới (nhựa)/
@@ -36,42 +28,17 @@ data/
 │ ├── 🛋️ Rác cồng kềnh (nệm, sofa, đồ gỗ lớn…)/
 │ ├── 🍌 Rác hữu cơ (thực phẩm thừa, vỏ rau củ, bã tràcà phê…; lá câycỏ cắt tỉa)/
 │ └── ♻️ Rác tái chế (giấybìa, nhựa, kim loại, thủy tinh…)/
-├── 🏥 Rác thải y tế (Health-care waste Medical waste)/
-│ ├── 🧪 Chemical (hóa chất)/
-│ ├── 🧬 Cytotoxic (thuốc gây độc tế bào)/
-│ ├── 🦠 Infectious (lây nhiễm)/
-│ ├── 🫁 Pathologicalanatomical (mô, bộ phận cơ thể)/
-│ ├── 💊 Pharmaceutical (thuốc quá hạnthu hồi)/
-│ ├── ☢️ Radioactive (phóng xạ)/
-│ └── 🩸 Sharps (vật sắc nhọn kim tiêm, lưỡi dao mổ…)/
-├── 🏗️ Rác xây dựng & phá dỡ (Construction & Demolition – C&D)/
-│ ├── 🧱 Bê tông, gỗ, nhựa đườngasphalt (đường & mái), thạch caogypsum (vách drywall)/
-│ ├── 🚪 Cấu kiện tháo dỡ tái sử dụng (cửa, cửa sổ, thiết bị ống nước…)/
-│ ├── 🔩 Kim loại, gạch, kính, nhựa/
-│ └── 🌍 Đất đácây gốc từ san lấp mặt bằng/
-└── 💻 Rác điện tử (E-waste WEEE)/
-├── 🖥️ Màn hìnhmonitor & thiết bị có màn hình lớn/
-├── 📱 Thiết bị CNTT & viễn thông cỡ nhỏ/
-├── 🧺 Thiết bị cỡ lớn/
-├── 🔌 Thiết bị cỡ nhỏ/
-├── ❄️ Thiết bị trao đổi nhiệt (tủ lạnh, máy lạnh…)/
-└── 💡 Đèn (lamps)/
+
 
 ## 🧠 2) Label Strategy (Chiến lược nhãn cho mô hình)
 
 ### ✅ Level A — 10 lớp (nhóm lớn)
 Phù hợp để demo “phân loại theo dòng thải” (giải thích rất dễ trong báo cáo):
 
-1. 🧪 Wastewater sludge  
-2. ⛏️ Mining waste  
-3. ☢️ Radioactive waste  
-4. 🌾 Agricultural waste  
-5. 🏗️ Industrial waste  
-6. ⚠️ Hazardous waste  
-7. 🏙️ MSW (Municipal Solid Waste)  
-8. 🏥 Medical waste  
-9. 🏗️ C&D (Construction & Demolition)  
-10. 💻 E-waste (WEEE)
+1. 🧪 Hazardous waste    
+2. 🌾 Agricultural waste  
+3. 🏗️ Industrial waste   
+4. 🏙️ MSW (Municipal Solid Waste)  
 
 ### 🎯 Level B — lớp chi tiết (theo folder con)
 Phù hợp để nâng cao độ “xịn”:
