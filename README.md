@@ -9,7 +9,7 @@ Dataset này được tổ chức theo **4 nhóm rác sinh hoạt hàng ngày (w
 > ✅ Mục tiêu: Cấu trúc dữ liệu rõ ràng • Dễ mở rộng • Dễ mapping nhãn • Phù hợp triển khai pipeline end-to-end
 
 ## 📌 1) Dataset Folder Structure (Theo đúng cây thư mục hiện tại)
-
+## <!-- 
 data/
 ├── 🌾 Rác nông nghiệp (Agricultural waste)/
 │ ├── 🧴 Bao bì hóa chất nông nghiệp/
@@ -27,7 +27,7 @@ data/
 │ ├── 🧻 Rác còn lạikhó tái chế (tãbỉm, đồ vệ sinh cá nhân)/
 │ ├── 🛋️ Rác cồng kềnh (nệm, sofa, đồ gỗ lớn…)/
 │ ├── 🍌 Rác hữu cơ (thực phẩm thừa, vỏ rau củ, bã tràcà phê…; lá câycỏ cắt tỉa)/
-│ └── ♻️ Rác tái chế (giấybìa, nhựa, kim loại, thủy tinh…)/
+│ └── ♻️ Rác tái chế (giấybìa, nhựa, kim loại, thủy tinh…)/ ## -->
 
 
 ## 🧠 2) Label Strategy (Chiến lược nhãn cho mô hình)
