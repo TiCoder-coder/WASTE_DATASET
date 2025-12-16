@@ -8,7 +8,7 @@ Dataset này được tổ chức theo **4 nhóm rác sinh hoạt hàng ngày (w
 
 > ✅ Mục tiêu: Cấu trúc dữ liệu rõ ràng • Dễ mở rộng • Dễ mapping nhãn • Phù hợp triển khai pipeline end-to-end
 
-## 📌 1) Dataset Folder Structure (Theo đúng cây thư mục hiện tại)
+## 📌 1) Dataset Folder Structure
 
 ## <!-- 
     data/
@@ -66,51 +66,6 @@ Ví dụ:
 - `msw__organics__phone__000001.jpg`
 - `medical__sharps__hospital__000045.jpg`
 - `ewaste__screens__web__000210.jpg`
-
-## 🧩 4) SAM2 → Mask → Crop → Classifier (Pipeline chuẩn đồ án)
-
-### Step 1 — 📥 Collect & Organize
-- Bỏ ảnh/video vào đúng folder (theo taxonomy ở mục 1)
-
-### Step 2 — ✂️ Segment with SAM2
-- SAM2 chạy theo chế độ “segment everything” hoặc prompt-based (point/box)
-- Ảnh nhiều vật thể → sinh **nhiều instance masks**
-
-### Step 3 — 🧷 Crop Objects from Masks
-- Dùng `mask + bbox` để crop từng vật thể ra ảnh riêng
-- Tuỳ chọn: set nền ngoài mask thành trắng/đen để classifier học tốt hơn
-
-### Step 4 — 🧠 Train Classifier
-Có 2 hướng:
-- **Train từ ảnh gốc** (nhanh, nhưng nhiễu nền)
-- **Train từ object crops** (chuẩn pipeline SAM2 + tăng accuracy)
-
----
-
-## 📦 5) Recommended Output Structure (khuyến nghị cho kết quả xử lý)
-
-> Nếu muốn chuyên nghiệp hơn, tạo folder output riêng để không lẫn với `data/`.
-
-outputs/
-├── 🧩 masks/ # mask PNG theo từng ảnh (instance-level)
-├── 🖍️ overlays/ # ảnh preview (mask overlay)
-├── ✂️ crops/ # object crops dùng cho classifier
-└── 📊 reports/ # confusion matrix, metrics, logs
-
-## ✅ 6) Data Quality Checklist (để dataset sạch)
-
-- 🔍 Ảnh rõ vật thể, hạn chế nhòe/mờ
-- 🌗 Tránh ảnh quá tối/điều kiện ánh sáng cực xấu
-- 🧬 Tránh ảnh trùng lặp (near-duplicate)
-- 🧩 Ảnh nhiều vật thể: ưu tiên ảnh rác “tách biệt” để mask không dính
-- ⚠️ Nhóm y tế/phóng xạ/nguy hại: ưu tiên ảnh minh hoạ rõ, tránh nội dung khó nhìn
-
-## 📝 7) Notes for Report (Gợi ý viết báo cáo)
-Khi viết báo cáo, nên nêu rõ:
-- Bạn train theo **Level A** hay **Level B**
-- Bạn dùng SAM2 để sinh mask & crop như thế nào
-- Vì sao “crop theo mask” giúp tăng chất lượng phân loại (giảm nhiễu nền)
-- Dataset lấy từ đâu (nếu có) + license
 
 ## 👤 Maintainer / Project Info
 - **Project:** Waste Sorting — SAM2 Segmentation + Classification  
