@@ -9,26 +9,27 @@ Dataset này được tổ chức theo **4 nhóm rác sinh hoạt hàng ngày (w
 > ✅ Mục tiêu: Cấu trúc dữ liệu rõ ràng • Dễ mở rộng • Dễ mapping nhãn • Phù hợp triển khai pipeline end-to-end
 
 ## 📌 1) Dataset Folder Structure (Theo đúng cây thư mục hiện tại)
-## <!-- 
-data/
-├── 🌾 Rác nông nghiệp (Agricultural waste)/
-│ ├── 🧴 Bao bì hóa chất nông nghiệp/
-│ ├── 🧵 Màng phủ nông nghiệp, ống tưới (nhựa)/
-│ └── 🌿 Phụ phẩm hữu cơ rơm rạ, vỏ trấu/
-├── 🏗️ Rác thải công nghiệp (Industrial waste)/
-│ ├── ✅ Không nguy hại (phế liệu bao bì, bùn không độc)/
-│ └── ⚠️ Nguy hại (dung môi, bùn mạ, hóa chất độc…)/
-├── ⚠️ Rác thải nguy hại (Hazardous waste)/
-│ ├── 🔥 Dễ cháy (Ignitable)/
-│ ├── 💥 Phản ứng mạnh (Reactive)/
-│ ├── 🧪 Ăn mòn (Corrosive)/
-│ └── ☠️ Độc (Toxic)/
-├── 🏙️ Rác thải sinh hoạt đô thị (Municipal Solid Waste – MSW)/
-│ ├── 🧻 Rác còn lạikhó tái chế (tãbỉm, đồ vệ sinh cá nhân)/
-│ ├── 🛋️ Rác cồng kềnh (nệm, sofa, đồ gỗ lớn…)/
-│ ├── 🍌 Rác hữu cơ (thực phẩm thừa, vỏ rau củ, bã tràcà phê…; lá câycỏ cắt tỉa)/
-│ └── ♻️ Rác tái chế (giấybìa, nhựa, kim loại, thủy tinh…)/ ## -->
 
+## <!-- 
+    data/
+
+        ├── 🌾 Rác nông nghiệp (Agricultural waste)/
+        │ ├── 🧴 Bao bì hóa chất nông nghiệp/
+        │ ├── 🧵 Màng phủ nông nghiệp, ống tưới (nhựa)/
+        │ └── 🌿 Phụ phẩm hữu cơ rơm rạ, vỏ trấu/
+        ├── 🏗️ Rác thải công nghiệp (Industrial waste)/
+        │ ├── ✅ Không nguy hại (phế liệu bao bì, bùn không độc)/
+        │ └── ⚠️ Nguy hại (dung môi, bùn mạ, hóa chất độc…)/
+        ├── ⚠️ Rác thải nguy hại (Hazardous waste)/
+        │ ├── 🔥 Dễ cháy (Ignitable)/
+        │ ├── 💥 Phản ứng mạnh (Reactive)/
+        │ ├── 🧪 Ăn mòn (Corrosive)/
+        │ └── ☠️ Độc (Toxic)/
+        ├── 🏙️ Rác thải sinh hoạt đô thị (Municipal Solid Waste – MSW)/
+        │ ├── 🧻 Rác còn lạikhó tái chế (tãbỉm, đồ vệ sinh cá nhân)/
+        │ ├── 🛋️ Rác cồng kềnh (nệm, sofa, đồ gỗ lớn…)/
+        │ ├── 🍌 Rác hữu cơ (thực phẩm thừa, vỏ rau củ, bã tràcà phê…; lá câycỏ cắt tỉa)/
+        │ └── ♻️ Rác tái chế (giấybìa, nhựa, kim loại, thủy tinh…)/ ## -->
 
 ## 🧠 2) Label Strategy (Chiến lược nhãn cho mô hình)
 
